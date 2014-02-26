@@ -1,0 +1,416 @@
+body {
+    counter-reset: section 0 enumerate 0 bibitem 0; 
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+    padding: 0;
+    color: #111;
+    background: #fff;
+}
+
+p {
+text-indent:25px;
+}
+
+div.title {
+    text-align:center;
+    font-style: normal; 
+    font-weight: bold; 
+    font-size: 150%;
+    counter-reset: eqn 0 figure 0 subsection 0 subsubsection 0 definition 0 
+    proposition 0 lemma 0 theorem 0 corollary 0 example 0 exercise 0 ;  
+}
+
+div.author {
+    text-align:center;
+    font-style: normal; 
+    font-size: 130%;     
+}
+
+div.email {
+    text-align:center;
+    font-family:monospace,"Courier New", Courier;
+    font-style: normal; 
+}
+
+div.address {
+    text-align:center;
+    font-style:normal; 
+}
+
+div.date {
+    text-align:center;
+    font-style: normal; 
+    padding-top: 10px;
+}
+
+div.abstract {
+    font-style: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+div.abstract:before {
+    font-variant: small-caps;
+    font-size: 105%; 
+    content: "Abstract.";     
+} 
+
+div.keywords {
+    font-style: normal;
+    font-size: 80%; 
+}
+
+div.keywords:before {
+    content: "Key words and phrases: ";
+    font-style: italic;
+}
+
+div.subjclass {
+    font-style: normal;
+    font-size: 80%; 
+}
+
+.centered {
+    text-align:center;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+h2.section {
+    margin-bottom:0.25em;
+    margin-top:1em;
+}
+
+h3.subsection {
+    margin-bottom:0.25em;
+    margin-top:0.75em;
+}
+
+h4.subsubsection {
+    margin-bottom:0.25em;
+    margin-top:0.5em;
+}
+
+div.enumerate {
+}
+
+div.itemize {
+}
+
+/* vertical spacing */
+
+p.LaTeXMathML {
+    font-size: 0.25em;
+}
+
+p.smallskip {  
+    font-size: 1.5em;
+}
+
+p.medskip {
+    font-size: 3em;
+}
+
+p.bigskip {
+    font-size: 4.5em;
+}
+
+pre.verb {
+    display:inline
+}
+
+/* Font-face LaTeX spans */
+
+span.textbf {
+    font-weight:bold;
+}
+
+span.textit {
+    font-style:italic;
+}
+
+em {
+    font-style:italic;
+/*    font-weight:bold;*/
+}
+
+span.textsc {
+    font-variant:small-caps
+}
+
+span.textsl {
+    font-style:oblique;
+}
+
+span.textsf {
+    font-family:sans-serif, Arial, Helvetica;
+}
+
+span.texttt {
+    font-family:monospace,"Courier New", Courier;
+}
+
+
+/* sections */
+h2.section { 
+    counter-reset: eqn 0 figure 0 subsection 0 subsubsection 0 definition 0 
+    proposition 0 lemma 0 theorem 0 corollary 0 example 0 exercise 0 ;  
+} 
+
+h2.section:before {
+    content: counter(section) " ";
+    counter-increment: section;  
+} 
+
+/* subsections */
+h3.subsection {
+    counter-reset: subsubsection 0;
+}
+
+h3.subsection:before {
+    content: counter(section) "." counter(subsection) " ";
+    counter-increment: subsection;  
+} 
+
+/* subsubsections */
+h4.subsubsection:before {
+content: counter(section)"."counter(subsection)"."counter(subsubsection)" ";
+counter-increment: subsubsection;  
+} 
+
+/* definition style, including number */
+div.definition:before {
+    content: "Definition "counter(definition)" "; 
+    counter-increment: definition 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.definition{ font-style:normal }
+
+/* proposition style, including number */
+div.proposition:before {
+    content: "Proposition "counter(theorem)" "; 
+    counter-increment: theorem 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.proposition{ font-style:italic }
+
+/* lemma style, including number */
+div.lemma:before {
+    content: "Lemma "counter(theorem)" "; 
+    counter-increment: theorem 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.lemma{ font-style:italic }
+
+/* theorem style, including number */
+div.theorem:before {
+    content: "Theorem "counter(theorem)" "; 
+    counter-increment: theorem 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.theorem{ font-style:italic }
+
+/* corollary style, including number */
+div.corollary:before {
+    content: "Corollary "counter(theorem)" "; 
+    counter-increment: theorem 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.corollary{ font-style:italic }
+
+/* Proof style, including number */
+div.proof:before { 
+    content: "Proof. "; 
+    font-style: italic; 
+}
+
+div.proof:after {
+   content: "\25A1"; /* use 220E for black square */
+   float: right;
+   float: bottom;
+   font-weight: bold 
+}
+
+/* example style, including number */
+div.example:before {
+    content: "Example "counter(example)" "; 
+    counter-increment: example 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.example {
+    font-style: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* exercise style, including number */
+div.exercise:before {
+    content: "Exercise "counter(exercise)" "; 
+    counter-increment: exercise 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.exercise {
+    font-style: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* exercises style, including number */
+div.exercises:before {
+    content: "Exercises"; 
+    font-style: normal; 
+    font-weight: bold; 
+}
+/*
+div.exercises {
+    font-weight: bold; 
+    font-style: normal;
+}
+*/
+/* exercises style, including number */
+span.problem:before {
+    content: counter(exercise)". "; 
+    counter-increment: exercise 1;
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.solution:before {
+    content: "Solution: ";
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+div.center {
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* thebibliography style, including number */
+div.thebibliography {
+    font-style: normal;
+    padding-top: 15px;
+}
+
+div.thebibliography:before { 
+    content: "References"; 
+    font-style: normal; 
+    font-weight: bold 
+}
+
+span.bibitem {
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+
+/* cites and refs */
+a.cite {
+    font-style: normal; 
+}
+
+a.ref {
+    font-style: normal; 
+}
+
+a.ref:before{ 
+    content: target-text(attr(href),before) 
+}
+
+      
+a.cite:before{ 
+   content: target-text(attr(href),before) 
+}
+
+
+/* figures */
+table.figure {
+    width:100%;
+}
+
+td.caption {
+    text-align:center;
+}
+
+td.caption:before {
+    content: "Figure "counter(figure)" ";
+    counter-increment: figure;  
+    font-style: normal; 
+    font-weight: bold 
+}
+
+td.image {
+    text-align:center;
+}
+/*
+div.figure:before {
+    font-style: normal; 
+    font-weight: bold;
+}
+*/
+/* LaTeXtable  configuration */
+
+table.LaTeXtable {
+   border-collapse:collapse;
+   margin-left:auto; 
+   margin-right:auto;
+}
+
+table.LaTeXtable td {
+   border:1px solid black;
+   padding:5px;
+}
+
+table.LaTeXtable tbody {
+   text-align:center;
+   margin-left:auto; 
+   margin-right:auto;
+}
+
+/*
+table.LaTeXtable td.caption:before {
+   content: "Table ";
+   font-style: normal; 
+   font-weight: bold 
+}
+*/
+table.LaTeXtable td.tabular table.tabular {
+   text-align:center;	
+}
+
+div.LaTeXtable {
+   text-align: center;	
+   margin-top: 10px; 
+   margin-bottom: 10px; 
+}
+
+div.LaTeXtable:before {
+   content: "Table "counter(LaTeXtable)": ";
+   counter-increment: LaTeXtable;  
+   font-style: normal; 
+   font-weight: bold;
+}
+
