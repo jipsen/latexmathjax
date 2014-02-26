@@ -51,10 +51,9 @@ div.abstract {
 }
 
 div.abstract:before {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 105%; 
     content: "Abstract:";     
+    font-variant: small-caps;
+    font-size: 105%;
 } 
 
 div.keywords {
@@ -133,7 +132,7 @@ span.textit {
 
 em {
     font-style:italic;
-    font-weight:bold;
+/*    font-weight:bold;*/
 }
 
 span.textsc {

@@ -51,7 +51,24 @@ t = t.replace(/\\caption\{([^\}]+)\}/g,'<div class="LaTeXtable">$1</div>');
         t = t.replace(/[\n\r]+[ \f\n\r\t\v\u2028\u2029]*[\n\r]+/g,'');
 	return t
     }
+    function loadfile(url) {
+	var req;
+        req = new XMLHttpRequest();
+	req.onreadystatechange = function(){
+	    if (req.readyState==4 && req.status==200){
+		document.getElementById('ltx').innerHTML = req.responseText;
+	    }
+	}
+	req.open("GET",url,false); //do synchronous request
+	req.send();
+    }
     window.onload = function() {
+        var nd = document.getElementById('ltx')
+        if (nd && nd.innerHTML.length<20) {
+            var fn = document.URL;
+            fn = fn.replace(/#.*/,""); // remove any anchor from URL
+            loadfile(fn.substring(0,fn.length-4)+"tex");
+        }
 	var pres = document.getElementsByTagName('pre');
 	for (var i=0; i<pres.length; i++){
             if (pres[i].className == "LaTeX") {
@@ -79,6 +96,7 @@ st = st.replace(/\\address\{([^\}]+)\}/g,address);
 st = st.replace(/\\date\{([^\}]+)\}/g,'<div class="date">$1</div>');
 st = st.replace(/\\keywords\{([^\}]+)\}/g,'<div class="keywords">$1.</div>'); 
 st = st.replace(/\\subjclass\[(\w+)\]\{([^\}]+)\}/g,'<div class="subjclass">$1  <i>Mathematics Subject Classification</i>: $2</div>'); 
+st = st.replace(/\\subjclass\{([^\}]+)\}/g,'<div class="subjclass"><i>Mathematics Subject Classification</i>: $1</div>'); 
 st = st.replace(/\\begin\{abstract\}/g,'<div class="abstract">'); 
 st = st.replace(/\\end\{abstract\}/g,"</div>");
 
