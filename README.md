@@ -50,4 +50,4 @@ Here are some sample pages:
 
 [A longer files](http://math.chapman.edu/~jipsen/latexmathjax/index.html)
 
-[A chapter of functions](http://math.chapman.edu/~jipsen/calculus/1.0/)
+[A chapter on functions](http://math.chapman.edu/~jipsen/calculus/1.0/)
