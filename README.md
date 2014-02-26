@@ -43,3 +43,11 @@ The **test.html** file looks as follows:
 If you prefer, the LaTeX code can also be manually inserted into the
 &lt;pre> tag, but then it cannot be processed with pdflatex and
 simultaneaously viewed in a browser.
+
+Here are some sample pages:
+
+[test.html](http://math.chapman.edu/~jipsen/latexmathjax/test.html)
+
+[A longer files](http://math.chapman.edu/~jipsen/latexmathjax/index.html)
+
+[A chapter of functions](http://math.chapman.edu/~jipsen/calculus/1.0/)
