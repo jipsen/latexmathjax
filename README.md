@@ -8,7 +8,7 @@ template HTML file below.
 
 &lt;!DOCTYPE html><br>
 &lt;html><br>
-  lt;head><br>
+  &lt;head><br>
 &lt;title>l-pregroups&lt;/title><br>
 &lt;script type="text/javascript" src="latexmathjax.js">&lt;/script><br>
 &lt;link rel="stylesheet" type="text/css" href="latexmathjax.css" /><br>
