@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Testing LaTeXMathJax</title>
+<script type="text/javascript" src="latexmathjax.js"></script>
+<link rel="stylesheet" type="text/css" href="latexmathjax.css" /> 
+</head>
+<body>
+<div><pre class="LaTeX">
+\documentclass{amsart} % this is ignored
+
+%\usepackage{tikz} % this is ignored
+
+\newtheorem{theorem}{Theorem} % these are ignored
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title[short title]{Testing LaTeXMathJax} % short title is ignored
+
+\author{Author Name}
+\email{author@email.edu}
+\address{Department of Mathematics\\ % \\ are replaced by comma
+University of LaTeX\\
+1234 MathJax St.\\
+City, ST 12345, Country}
+
+\author{Second Author}
+\email{author2@email.edu}
+\address{HTML University\\
+Faculty of CSS\\
+One University Drive\\
+City, ST 12345, Country}
+
+\keywords{keyword1, keyword2}
+
+\renewcommand{\subjclassname}{% this is ignored
+  \textup{2000} Mathematics Subject Classification}
+\subjclass{Primary: xxAyy, Secondary: xxByy, xxCyy}
+\date{Feb 25, 2014}
+
+\begin{document} % this is ignored
+
+\begin{abstract}
+This is a test article to check if all the regex translation rules
+are applied correctly.
+\end{abstract}
+
+\maketitle % this is ignored
+
+Some famous person~\cite{FP99} defined \emph{some important objects} as 
+a special case of the following more general stuff:
+$$
+\text{a displayed equation: }\sqrt{r^2-x^2}.
+$$
+
+\begin{center}
+Several lines that
+
+should be centered
+\end{center}
+
+\begin{figure}
+%\begin{tikzpicture}
+%This stuff is deleted since tikz is not handled (yet)
+%\end{tikzpicture}
+\caption{Here is the figure caption}
+\end{figure}
+
+Theorem~\ref{TheoremX} below is proved with the help of several lemmas.
+
+\begin{lemma}\label{LemmaA} Some fairly easy result.
+\end{lemma}
+\begin{proof}
+It is true because of the following simple steps:
+
+Step1
+
+Step2
+
+Done.
+\end{proof}
+
+\begin{lemma}\label{LemmaB}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}} % this is ignored
+  \item First item
+  \item Second item
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) is obvious.
+
+(2) needs some careful thought.
+\end{proof}
+
+\begin{theorem}\label{TheoremX} This is the main result.
+\end{theorem}
+\begin{proof}
+Follows from the preceeding lemmas.
+\end{proof}
+Note that the converse of Lemma~\ref{LemmaA} also holds.
+
+\begin{corollary}
+This result is a simple consequence of the previous theorem.
+\end{corollary}
+
+\begin{thebibliography}{}
+\bibitem{FP99} Famous Person,
+\emph{A representation theorem for distributive $\ell$-monoids}, 
+J. of Math. 123 (1999), no. 1, 1--23. 
+\end{thebibliography}
+\end{document}
+</pre>
+</body>
+</html>
+
