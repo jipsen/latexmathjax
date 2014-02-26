@@ -17,8 +17,8 @@ div.title {
     font-style: normal; 
     font-weight: bold; 
     font-size: 150%;
-    counter-reset: eqn 0 figure 0 subsection 0 subsubsection 0 definition 0 
-    proposition 0 lemma 0 theorem 0 corollary 0 example 0 exercise 0 ;  
+    counter-reset: subsection 0 subsubsection 0 definition 0 
+    proposition 0 lemma 0 theorem 0 corollary 0 example 0 exercise 0 figure 0;  
 }
 
 div.author {
