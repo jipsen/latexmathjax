@@ -48,6 +48,6 @@ Here are some sample pages:
 
 [test.html](http://math.chapman.edu/~jipsen/latexmathjax/test.html)
 
-[A longer files](http://math.chapman.edu/~jipsen/latexmathjax/index.html)
+[A longer file](http://math.chapman.edu/~jipsen/latexmathjax/index.html)
 
 [A chapter on functions](http://math.chapman.edu/~jipsen/calculus/1.0/)
