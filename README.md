@@ -51,3 +51,6 @@ Here are some sample pages:
 [A longer file](http://math.chapman.edu/~jipsen/latexmathjax/index.html)
 
 [A chapter on functions](http://math.chapman.edu/~jipsen/calculus/1.0/)
+
+
+Note: LaTeXMathJax is designed to automatically load MathJax (from a cdn). Hence MathJax should not also be loaded at the top of the html file that loads LaTeXMathJax.js since this can cause conflicts preventing MathJax from loading properly.
