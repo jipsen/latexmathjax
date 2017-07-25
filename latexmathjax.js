@@ -229,7 +229,8 @@ st = st.replace(/\\proof/g,"<b>Proof: </b>");
 	    head.appendChild(script);
 	    script = document.createElement("script");
 	    script.type = "text/javascript";
-	    script.src  = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	    script.src  = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		//or edit previous line for any other cdn or local mathjax installation
 	    head.appendChild(script);
 	})();
     }
